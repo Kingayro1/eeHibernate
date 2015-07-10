@@ -14,10 +14,10 @@ protected  String jobTitle;
        protected float salary; 
        protected BufferedImage imageFile;
        private static final long serialVersionUID = 1L;
-       private long id= null; //can be used to identify an employee
-       public long getEmpId(){
-    	   return id;
-       }
+       private Long id = null;
+       private String phoneNo="";
+       
+
 public Employee() 
 { 
 //Default constructor
@@ -27,12 +27,12 @@ dateOfBirth = null;
 
 start = null;
 } 
-public Employee(String name, char gender, Date dob, long eid, Date estart) 
+public Employee(String name, char gender, Date dob, Date estart) 
 { 
 //Constructor to set employee variables
 
 	super(name,gender,dob);
-	id=eid;
+	//id=eid;
 	start=estart;	
 } 
 
@@ -65,7 +65,7 @@ public String getDOB()
  * method to retrive employee's id
  * return id
  */
-public long getID()
+public Long getID()
 {
 	return id;
 }
@@ -148,9 +148,18 @@ public String toString()
 	return(name+","+ gender+","+dateOfBirth+","+id+ ","+jobTitle+","+start+","+salary);
 } 
 public int hashCode() {
-return this.getEmpId().intValue();
+	return this.getID().intValue();
 }
 public static long getSerialVersionUID() {
 return serialVersionUID;
+}
+public void setID(Long id){
+	this.id=id;
+}
+public String getphoneNo(){
+	return phoneNo;
+}
+public void setphoneNo(String aphoneNo){
+	this.phoneNo = aphoneNo;
 }
 } 

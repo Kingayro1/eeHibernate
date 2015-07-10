@@ -579,7 +579,7 @@ public class GUI extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please enter salary and dates correctly.");
 			}
 			else{
-			employeeRecords.add(newEmployee = new Employee(name, gender, dob,newEmployee.getEmpId(), startDate));
+			employeeRecords.add(newEmployee = new Employee(name, gender, dob, startDate));
 			newEmployee.setJobTitle(jobTitle);//passing parametres into newemployee
 			newEmployee.setSalary(salary);
 			newEmployee.setEmployeeImage(image);
@@ -755,7 +755,7 @@ public class GUI extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please enter data correctly.");
 			}
 			else{
-			employeeRecords.add(newEmployee = new Employee(name, gender, dob,newEmployee.getEmpId(), startDate));
+			employeeRecords.add(newEmployee = new Employee(name, gender, dob, startDate));
 			newEmployee.setJobTitle(jobTitle);//passing parametres into newemployee
 			newEmployee.setSalary(salary);
 			newEmployee.setEmployeeImage(image);
@@ -827,7 +827,7 @@ public class GUI extends JFrame {
 				String job = words[4];
 				Date start = convertStringToDate(words[5]);
 				float salary = Float.parseFloat(words[6]);
-				employeeRecords.add(newEmployee = new Employee (name,gender,DOB,newEmployee.getEmpId(),start));     //assign values to employee constructor and add the employee to employeerecords store
+				employeeRecords.add(newEmployee = new Employee (name,gender,DOB,start));     //assign values to employee constructor and add the employee to employeerecords store
 				newEmployee.setJobTitle(job);//passing parametres into newemployee
 				newEmployee.setSalary(salary);
 			

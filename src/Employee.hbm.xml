@@ -4,19 +4,22 @@
  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
 
 <hibernate-mapping>
-   <class name="Employee" table="EMPLOYEE">
+   <class name="Employee" table="EMPLOYEES">
       <meta attribute="class-description">
          This class contains the employee detail. 
       </meta>
-      <id name="id" type="int" column="employee_id">
-         <generator class="native"/>
+      <id name="ID" type="long" column="employee_id">
+      <generator class="sequence">
+      <param name="sequence">employee_seq</param>
+         </generator>
       </id>
-      <property name="firstName" column="first_name" type="string"/>
-      <property name="lastName" column="last_name" type="string"/>
-      <property name="salary" column="salary" type="int"/>
-      <property name ="email" column="email" type="string"/>
+
+      <property name="Name" column="first_name" type="string"/>
+    
+      <property name="salary" column="salary" type="float"/>
+      
       <property name="phoneNo" column="phone_number" type="string"/>
-      <property name="date" column="hire_date" type ="string"/>
+     
       <property name="jobTitle" column="job_id" type="string"/>
     
    </class>
