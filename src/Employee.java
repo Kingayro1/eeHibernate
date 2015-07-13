@@ -16,6 +16,7 @@ protected  String jobTitle;
        private static final long serialVersionUID = 1L;
        private Long id = null;
        private String phoneNo="";
+       private String natInsNo="";
        
 
 public Employee() 
@@ -156,10 +157,8 @@ return serialVersionUID;
 public void setID(Long id){
 	this.id=id;
 }
-public String getphoneNo(){
-	return phoneNo;
-}
-public void setphoneNo(String aphoneNo){
-	this.phoneNo = aphoneNo;
+
+public void setstartDate (Date astart){
+	start = astart;
 }
 } 

@@ -8,19 +8,21 @@
       <meta attribute="class-description">
          This class contains the employee detail. 
       </meta>
-      <id name="ID" type="long" column="employee_id">
+      <id name="ID" type="long" column="id">
       <generator class="sequence">
       <param name="sequence">employee_seq</param>
          </generator>
       </id>
 
-      <property name="Name" column="first_name" type="string"/>
+      <property name="Name" column="name" type="string"/>
     
       <property name="salary" column="salary" type="float"/>
       
-      <property name="phoneNo" column="phone_number" type="string"/>
+      <property name="phone" column="phoneno" type="string"/>
      
-      <property name="jobTitle" column="job_id" type="string"/>
-    
+      <property name="jobTitle" column="jobtitle" type="string"/>
+      <property name="DOB" column="DOB" type="string"/>
+      <property name="startDate" column="startdate" type="string"/>
+      <property name="natInsNo" column="natInsurNo" type="string"/>
    </class>
 </hibernate-mapping>

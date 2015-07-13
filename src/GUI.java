@@ -583,11 +583,12 @@ public class GUI extends JFrame {
 			newEmployee.setJobTitle(jobTitle);//passing parametres into newemployee
 			newEmployee.setSalary(salary);
 			newEmployee.setEmployeeImage(image);
-			
+			newEmployee.setNatInsNo(natInsurNo);
+			newEmployee.setphone(phoneNo);
 			employeeDAO empDAO = new employeeDAO();
 			empDAO.createSession();
 			empDAO.create(newEmployee);
-			
+			System.out.println(phoneNo);
 			//reset text fields			
 			nameField.setText("");
 			salaryField.setText("");
