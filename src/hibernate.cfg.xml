@@ -11,9 +11,15 @@
         <property name="connection.url">
           jdbc:oracle:thin:@localhost:1521:orcl
         </property>
+<<<<<<< HEAD
         <property name="connection.username"></property>
         <property name="connection.password"></property>
         <property name="default_schema"></property>
+=======
+        <property name="connection.username">system</property>
+        <property name="connection.password">Kingayro1</property>
+        <property name="default_schema">system</property>
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
         <property name="connection.autocommit">false</property>
  
         <property name="show_sql">true</property>

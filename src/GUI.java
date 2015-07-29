@@ -1,4 +1,5 @@
 import java.awt.Container;
+<<<<<<< HEAD
 import java.awt.image.BufferedImage;
 
 import javax.imageio.ImageIO;
@@ -7,6 +8,12 @@ import javax.swing.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+=======
+
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,13 +36,21 @@ public class GUI extends JFrame {
     JPanel Panel1;
     JPanel Panel2,Panel2a,Panel2b,Panel2c;
     JPanel displayPanel,searchPanel;
+<<<<<<< HEAD
     ApplicationContext ct = new ClassPathXmlApplicationContext("bean.xml");
+=======
+
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 	BufferedReader br = null;
 	BufferedWriter bw = null;
 	
 	int count=0;
 	Store newStoreFile;
+<<<<<<< HEAD
 	Employee newEmployee = (Employee) ct.getBean("employee") ;
+=======
+	Employee newEmployee = new Employee() ;
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 	Employee foundRecord;
 	Store employeeRecords = new Store();
 	
@@ -524,7 +539,11 @@ public class GUI extends JFrame {
 		displayPanel.setVisible(false);
 		searchPanel.setVisible(false);
 		
+<<<<<<< HEAD
 	
+=======
+		jdbc.connectDatabase();
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 	}
 
 
@@ -583,6 +602,7 @@ public class GUI extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please enter salary and dates correctly.");
 			}
 			else{
+<<<<<<< HEAD
 			employeeRecords.add(newEmployee = new Employee(name, gender, dob,newEmployee.getEmpId(), startDate));
 			newEmployee.setJobTitle(jobTitle);//passing parametres into newemployee
 			newEmployee.setSalary(salary);
@@ -595,6 +615,18 @@ public class GUI extends JFrame {
 			empDAO.createSession();
 			empDAO.create(newEmployee);
 			
+=======
+			employeeRecords.add(newEmployee = new Employee(name, gender, dob, startDate));
+			newEmployee.setJobTitle(jobTitle);//passing parametres into newemployee
+			newEmployee.setSalary(salary);
+			newEmployee.setEmployeeImage(image);
+			newEmployee.setNatInsNo(natInsurNo);
+			newEmployee.setphone(phoneNo);
+			employeeDAO empDAO = new employeeDAO();
+			empDAO.createSession();
+			empDAO.create(newEmployee);
+			System.out.println(phoneNo);
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 			//reset text fields			
 			nameField.setText("");
 			salaryField.setText("");
@@ -762,7 +794,11 @@ public class GUI extends JFrame {
 				JOptionPane.showMessageDialog(null, "Please enter data correctly.");
 			}
 			else{
+<<<<<<< HEAD
 			employeeRecords.add(newEmployee = new Employee(name, gender, dob,newEmployee.getEmpId(), startDate));
+=======
+			employeeRecords.add(newEmployee = new Employee(name, gender, dob, startDate));
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 			newEmployee.setJobTitle(jobTitle);//passing parametres into newemployee
 			newEmployee.setSalary(salary);
 			newEmployee.setEmployeeImage(image);
@@ -834,7 +870,11 @@ public class GUI extends JFrame {
 				String job = words[4];
 				Date start = convertStringToDate(words[5]);
 				float salary = Float.parseFloat(words[6]);
+<<<<<<< HEAD
 				employeeRecords.add(newEmployee = new Employee (name,gender,DOB,newEmployee.getEmpId(),start));     //assign values to employee constructor and add the employee to employeerecords store
+=======
+				employeeRecords.add(newEmployee = new Employee (name,gender,DOB,start));     //assign values to employee constructor and add the employee to employeerecords store
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 				newEmployee.setJobTitle(job);//passing parametres into newemployee
 				newEmployee.setSalary(salary);
 			

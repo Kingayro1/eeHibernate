@@ -14,10 +14,18 @@ protected  String jobTitle;
        protected float salary; 
        protected BufferedImage imageFile;
        private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
        private long id= null; //can be used to identify an employee
        public long getEmpId(){
     	   return id;
        }
+=======
+       private Long id = null;
+       private String phoneNo="";
+       private String natInsNo="";
+       
+
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 public Employee() 
 { 
 //Default constructor
@@ -27,12 +35,20 @@ dateOfBirth = null;
 
 start = null;
 } 
+<<<<<<< HEAD
 public Employee(String name, char gender, Date dob, long eid, Date estart) 
+=======
+public Employee(String name, char gender, Date dob, Date estart) 
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 { 
 //Constructor to set employee variables
 
 	super(name,gender,dob);
+<<<<<<< HEAD
 	id=eid;
+=======
+	//id=eid;
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 	start=estart;	
 } 
 
@@ -65,7 +81,11 @@ public String getDOB()
  * method to retrive employee's id
  * return id
  */
+<<<<<<< HEAD
 public long getID()
+=======
+public Long getID()
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 {
 	return id;
 }
@@ -148,9 +168,23 @@ public String toString()
 	return(name+","+ gender+","+dateOfBirth+","+id+ ","+jobTitle+","+start+","+salary);
 } 
 public int hashCode() {
+<<<<<<< HEAD
 return this.getEmpId().intValue();
+=======
+	return this.getID().intValue();
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 }
 public static long getSerialVersionUID() {
 return serialVersionUID;
 }
+<<<<<<< HEAD
+=======
+public void setID(Long id){
+	this.id=id;
+}
+
+public void setstartDate (Date astart){
+	start = astart;
+}
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 } 

@@ -177,6 +177,15 @@ public abstract class  Person
 
     	  return("The name of this person is "+name+", gender is "+ gender+", date of birth is"+ dateOfBirth+", nation insurance number is "+ natInsceNo+", address is"+ address+", phone number is "+phoneNo+".");
 }
+<<<<<<< HEAD
 
+=======
+public void setDOB(Date dob){
+	this.dateOfBirth=dob;
+}
+public void setphone(String phoneNo){
+	this.phoneNo=phoneNo;
+}
+>>>>>>> 549120e47da240779c47463b221dc7e42e7ceedd
 	
 } 
